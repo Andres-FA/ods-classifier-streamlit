@@ -64,17 +64,7 @@ texto = st.text_area(
     key="texto_usuario"
 )
 
-col1, col2 = st.columns(2)
-
-with col1:
-    predecir = st.button("Predecir ODS", use_container_width=True)
-
-with col2:
-    limpiar = st.button("Limpiar", use_container_width=True)
-
-if limpiar:
-    st.session_state["texto_usuario"] = ""
-    st.rerun()
+predecir = st.button("Predecir ODS")
 
 if predecir:
     if not st.session_state["texto_usuario"].strip():
